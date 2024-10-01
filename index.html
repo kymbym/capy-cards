@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capyblackjack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-page">
+        <h1>welcome to capy blackjack🃏</h1>
+        <div id="start-button-container">
+        <button id="start-button">start game</button>
+        <button id="open-rules">rules</button>
+        </div>
+        <dialog id="rules">
+            <p><strong>Objective:</strong> Try to get a hand value as close to 21 as possible without going over. If your hand value exceeds 21, you lose the round (bust).</p>
+            <br>
+            <p><strong>Instructions:</strong></p>
+            <p>1. Number cards (2-10) are worth their face value.</p>
+            <p>2. Face cards (J, Q, K) are worth 10 points.</p>
+            <p>3. Aces can be worth 1 or 11 points, depending on which value is better for your hand.</p>
+            <p>4. Hit: Draw another card to improve your hand.</p>
+            <p>5. Stand: Keep your current hand and end your turn.</p>
+    <br>
+            <p><strong>Rules:</strong></p>
+            <p>1. If neither you nor the computer busts, the hand closest to 21 wins.</p>
+            <p>2. If both have the same value, it's a tie (push).</p>
+            <p>3. A hand with an Ace and a 10-point card is a Blackjack.</p>
+            <p>4. Winning with an automatic Blackjack pays 3:2.</p>
+            <p>5. Winning without a Blackjack pays 1:1.</p>
+            <p>6. A tie results in no payout.</p>
+    <br>
+            <p>Place your bets before the game starts where bets can be adjusted each round and winnings are added to your bank!</p>
+    <br>
+            <p>After each round, you can choose to play again and your bank will reset. Alternatively, you may choose to retain your bank balance by clicking next round.</p>
+    
+        <button id="close-rules">close</button>
+    </dialog>
+
+    </div>
+    
+    <dialog id="round-result">
+        <h2>result:</h2>
+        <p id="result-message"></p>
+        <button id="close-result">close</button>
+    </dialog>
+
+    <div id="game-page">
+
+    <div id="bet-prompt">
+        <h1>place your bets!</h1>
+    </div>
+
+        <div id="bet-coins">
+            <button class="bet-coin" data-value="1">1</button>
+            <button class="bet-coin" data-value="10">10</button>
+            <button class="bet-coin" data-value="50">50</button>
+            <button class="bet-coin" data-value="100">100</button>
+            <div id="bet-display">
+                <h3 id="bet-total">bet: $0</h3>
+            </div>
+        </div>
+
+        <div id="bank-coins">
+            <button class="bank-coin" data-value="1">1</button>
+            <button class="bank-coin" data-value="10">10</button>
+            <button class="bank-coin" data-value="50">50</button>
+            <button class="bank-coin" data-value="100">100</button>
+            <div id="bank-display">
+                <h3 id="bank-total">bank: $1000</h3>
+            </div>
+        </div> 
+
+        <div id="card-display">
+            <h3 id="dealer-turn">dealer's turn!</h3>
+            <div id="dealer-score"></div>
+            <div id="dealer-hand"></div>
+            <h3 id="player-turn">player's turn!</h3>
+            <div id="player-score"></div>
+            <div id="player-hand"></div>
+        </div>
+
+         
+    <div id="buttons">
+        <button id="hit-button">hit</button>
+        <button id="stand-button">stand</button>
+        <button id="new-game-button">new game</button>
+        <button id="next-round-button">next round!</button>
+    </div>
+
+    </div>
+
+
+    <button id="deal-button">deal</button>
+
+    <div id="result-message"></div>
+    <dialog id="lost">
+        <h2>oh no!</h2>
+        <p id="lost-message"></p>
+        <button id="close-lost">close</button>
+    </dialog>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+@font-face {
+    font-family: 'Dunkin';
+    src: url('assets /font/Dunkin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    background-color: #A89B8C;
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#start-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#start-page h1 {
+    font-family: Dunkin;
+    font-size: 47px;
+    margin: 0;
+    padding: 0;
+}
+
+#start-button {
+    text-align: center;
+    font-family: Dunkin;
+    font-size: 23px;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 0.2px;
+    border-radius: 5px;
+}
+
+#open-rules {
+    text-align: center;
+    font-family: Dunkin;
+    font-size: 23px;
+    margin: 0;
+    padding: 5px 7px;
+    max-width: 150px;
+    margin-top: 20px;
+    border: 0.2px;
+    border-radius: 5px;
+}
+
+#rules {
+    border: solid 2px white;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #6A7B8C;
+    color: white;
+    font-family: Dunkin;
+    width: 100%;
+    height: 90%;
+    max-width: 500px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#close-rules {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #9C9A6C;
+    font-family: Dunkin;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#start-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#bet-prompt {
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Dunkin;
+    font-size: 17px;
+}
+
+#game-page {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bank-coins {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+#bet-coins {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bank-coin {
+    font-family: Dunkin;
+    font-size: 23px;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6A7B8C;
+    color: white;
+}
+
+.bet-coin {
+    font-family: Dunkin;
+    font-size: 23px;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6A7B8C;
+    color: white;
+}
+
+#bank-display {
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#bet-display {
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#bet-total, #bank-total {
+    font-family: Dunkin;
+    font-size: 23px;
+}
+
+#deal-button {
+    position: absolute;
+    bottom: 124px;
+    left: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Dunkin;
+    font-size: 23px;
+    padding: 5px, 10px;
+    border: 0.2px;
+    border-radius: 5px;
+}
+
+#card-display {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.card {
+    font-family: Dunkin;
+    width: 140px;
+    height: 170px;
+    border: 1px solid white;
+    border-radius: 5px;
+    line-height: 80px;
+    margin: 5px;
+    text-align: center;
+    font-size: 19px;
+    color: white;
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
+    align-items: center;
+    justify-content: center;
+    background-size: 280%;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.face-down {
+    background-color: #6A7B8C;
+    color: transparent;
+    background-size: 280%;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+}
+
+#player-turn, #dealer-turn {
+    font-family: Dunkin;
+    font-size: 38px;
+    text-align: center;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Dunkin;
+    position: relative;
+}
+
+#dealer-score, #player-score {
+    font-family: Dunkin;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#dealer-hand, #player-hand {
+    font-family: Dunkin;
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+    display: flex;
+}
+
+#buttons {
+    font-size: 18px;
+    padding: 5px 7px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+#buttons button {
+    font-family: Dunkin;
+    padding: 5px 7px;
+    border: 0.2px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #9C9A6C;
+    cursor: pointer;
+    color: white;
+} 
+
+#result-message {
+    font-family: Dunkin;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+}
+
+#round-result {
+    border: solid 2px white;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #6A7B8C;
+    color: white;
+    font-family: Dunkin;
+    width: 50%;
+    height: 25%;
+    max-width: 300px;
+    max-height: 250px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#close-result {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #9C9A6C;
+    font-family: Dunkin;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* keyframe animations for words to flip*/
+
+/* .fadeOut {
+    animation: fadeOut 2s ease-out;
+    opacity: 0; can use this animation for player's or dealer's turn
+} */
+
+/* note from lawrence project:
+
+    const diceRolledTotalAnimationOn=()=> {
+    diceRolledContainer.style.display="block";
+    diceRolledContainer.classList.remove("fadeOut"); // remove the fadeOut in css to remove the effect
+    diceRolledContainer.classList.add("fadeIn"); // add the fadeIn in css to remove the effect
+    diceRolledTotal.textContent=rollTotal;
+    setTimeout(diceRolledTotalAnimationOff, 1500);
+}
+; */
